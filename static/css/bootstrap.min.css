@@ -106,3 +106,10 @@ body {
     padding: 15px;
     border-bottom: 1px solid #f1f5f9;
 }
+body {
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
