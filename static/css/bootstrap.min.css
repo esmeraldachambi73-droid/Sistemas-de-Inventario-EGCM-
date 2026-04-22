@@ -1,102 +1,108 @@
-/* ESTILO PREMIUM MINIMALISTA - EGCM */
+/* ESTILO DEFINITIVO TECH INVENTORY - EGCM */
 :root {
     --primary: #2563eb;
-    --dark: #0f172a;
-    --light: #f8fafc;
-    --white: #ffffff;
+    --dark: #1e293b;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --bg-light: #f1f5f9;
 }
 
 body {
-    background-color: var(--light);
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    color: var(--dark);
+    /* Fondo degradado suave para que resalte el contenido */
+    background: linear-gradient(135deg, #e0e7ff 0%, #f1f5f9 100%);
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     margin: 0;
+    min-height: 100vh;
 }
 
-/* ELIMINAR LINKS AZULES FEOS */
-a {
-    text-decoration: none !important;
-    color: inherit;
-}
-
-/* NAVBAR MODERNA */
+/* NAVBAR PROFESIONAL */
 .navbar {
-    background: var(--white);
+    background: var(--dark) !important;
     padding: 1rem 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    color: white !important;
     font-weight: 800;
-    color: var(--primary) !important;
-    text-transform: uppercase;
+    text-decoration: none !important; /* Quita el subrayado azul */
 }
 
 .nav-link {
+    color: rgba(255,255,255,0.8) !important;
     font-weight: 600;
-    color: #64748b !important;
-    margin-left: 20px;
-    transition: 0.3s;
+    text-decoration: none !important;
+    margin-left: 15px;
 }
 
-.nav-link:hover { color: var(--primary) !important; }
-
-/* CONTENEDOR TIPO TARJETA */
+/* CONTENEDOR PRINCIPAL (TARJETA BLANCA) */
 .main-content {
     max-width: 900px;
     margin: 50px auto;
-    background: var(--white);
+    background: white;
     padding: 40px;
-    border-radius: 16px;
+    border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* TÍTULOS Y TABLAS SEPARADAS */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+/* FORMULARIOS Y CUADROS DE TEXTO */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box; /* Evita que los cuadros se salgan del borde */
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
     color: var(--dark);
 }
 
+/* BOTONES REALES CON COLORES */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    text-decoration: none !important;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-success { background: var(--success); color: white; }
+.btn-danger { background: var(--danger); color: white; }
+.btn-warning { background: var(--warning); color: white; }
+.btn-primary { background: var(--primary); color: white; }
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* TABLAS LIMPIAS */
 .table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px; /* Separa las filas */
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
 .table th {
-    background: #f1f5f9;
+    background: #f8fafc;
     padding: 15px;
     text-align: left;
-    font-size: 0.8rem;
-    text-transform: uppercase;
+    border-bottom: 2px solid #e2e8f0;
     color: #64748b;
 }
 
 .table td {
-    padding: 20px 15px;
-    background: var(--white);
-    border-top: 1px solid #f1f5f9;
+    padding: 15px;
     border-bottom: 1px solid #f1f5f9;
 }
-
-/* BOTONES */
-.btn {
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.btn-success { background: #22c55e; color: white; }
-.btn-warning { background: #f59e0b; color: white; }
-.btn-danger { background: #ef4444; color: white; }
-
-.btn:hover { filter: brightness(0.9); }
